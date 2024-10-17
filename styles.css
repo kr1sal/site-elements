@@ -1,0 +1,414 @@
+/* Common styles */
+* {
+    margin: 0;
+    padding: 0;
+    
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #F1CDB3;
+    --color-light-xl: #FFFFFF;
+    --color-light-l: #F6F6F6;
+    --color-light-s: #FAFAFA;
+    --color-dark-s: #CDCDCD;
+    --color-dark-3xl: #292929;
+    --color-dark-l: #545454;
+    --color-dark-xl: #4C4C4C;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 27px;
+    color: var(--color-light-xl);
+
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: Georgia;
+    font-weight: normal;
+    line-height: 130%;;
+}
+
+p {
+    font-family: Arial;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 160%;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+section:nth-of-type(2n) {
+    background: var(--color-light-l);
+}
+
+section h3 {
+    color: var(--color-dark-l);
+}
+
+section p {
+    color: var(--color-dark-xl);
+}
+
+button {
+    font-family: Georgia;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+
+    width: 207px;
+    height: 52px;
+
+    border-radius: 100px;
+}
+
+button.primary {
+    border: 0;
+    background-color: var(--color-primary);
+}
+
+button.primary:hover {
+    border: 2px solid;
+    border-color: var(--color-primary);
+    background-color: var(--color-light-xl);
+}
+
+button.secondary {
+    border: 2px solid;
+    border-color: var(--color-primary);
+    background-color: var(--color-light-xl);
+}
+
+button.secondary:hover {
+    border: 0;
+    background-color: var(--color-primary);
+}
+
+/* Specific styles */
+header {
+    position: absolute;
+
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    /* height: 60px; */
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* height: 60px; */
+}
+
+.logo__title {
+    font-family: Georgia;
+    font-size: 32px;
+    color: var(--color-primary);
+    /* letter-spacing: 2px; */
+    letter-spacing: 0.1em;
+}
+
+.logo__subtitle {
+    font-family: Arial;
+    font-size: 13px;
+    color: var(--color-light-xl);
+    letter-spacing: 0.15em;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    /* height: 27px; */
+    width: 452px;
+
+    padding-top: 15px;
+}
+
+.menu__item a {
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: normal;
+    color: var(--color-dark-s);
+}
+
+.menu__item a:active {
+    border-bottom: 2px solid;
+    border-color: var(--color-primary);
+    color: var(--color-light-s);
+}
+
+
+.start-screen {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background-image: url("./assets/background.png"), linear-gradient(135deg, #5B483A 0%, #262425 75%);
+    
+    padding-top: 180px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.start-screen__content {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 42px;
+
+    min-height: 322px;
+    width: 322px;
+}
+
+.start-screen__content h2 {
+    font-size: 44px;
+    letter-spacing: 0;
+}
+
+.start-screen__content p {
+    color: var(--color-dark-s);
+}
+
+.start-screen__puppy {
+    width: 698px;
+    height: 728px;
+}
+
+
+.about {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+
+    gap: 120px;
+
+    background-color: var(--color-light-xl);
+}
+
+.about__pets {
+    width: 300px;
+    height: 408px;
+}
+
+.about__content {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 25px;
+
+    max-width: 430px;
+
+    background: var(--color-light-xl);
+}
+
+.about__content h3 {
+    color: var(--color-dark-l);
+}
+
+
+.pets {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 60px;
+}
+
+.pets h3 {
+    text-align: center;
+}
+
+.slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    width: 100%;
+}
+
+.slider__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 435px;
+}
+
+.slider__card img {
+    width: 270px;
+    height: 270px;
+}
+
+.slider__card p {
+    font-family: Georgia;
+    font-size: 20px;
+}
+
+
+.help {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.help h3 {
+    text-align: center;
+}
+
+
+.help-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    row-gap: 55px;
+
+    padding-top: 60px;
+}
+
+.help-list__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 180px;
+
+    height: 113px;
+}
+
+.help-list__item h4 {
+    color: var(--color-dark-l);
+}
+
+
+.donation {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+.donation__dog {
+    width: 505px;
+    height: 261px;
+}
+
+.donation__content {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 380px;
+
+    gap: 20px;
+}
+
+.donation__content h5 {
+    color: var(--color-dark-l);
+}
+
+.donation__credit-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    background: var(--color-primary);
+
+    border-radius: 9px;
+}
+
+.donation__credit-card svg {
+    margin-right: 15px;
+}
+
+.donation__credit-card h4 {
+    color: var(--color-dark-l);
+}
+
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background-image: url("./assets/background.png"), linear-gradient(90deg, #513D2F 0%, #1A1A1C 100%);
+
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.footer__puppy {
+    width: 300px;
+    height: 310px;
+}
+
+.info-sheet {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding-bottom: 60px;
+}
+
+.info-sheet h3 {
+    font-size: 35px;
+}
+
+.info-sheet h4 {
+    font-size: 20px;
+}
+
+.info-sheet__card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 20px;
+}
